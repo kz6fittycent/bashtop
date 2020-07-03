@@ -6,6 +6,13 @@ A snap for bashtop
 `sudo snap install bashtop`
 
 
+Once installed, run the following commands to improve functionality:
+
+```
+sudo snap connect bashtop:mount-observe
+sudo snap connect bashtop:network-control
+```
+
 ## To learn more:
 
 https://snapcraft.io/bashtop 
