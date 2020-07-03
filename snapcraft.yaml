@@ -48,10 +48,12 @@ parts:
       - coreutils
       - grep
       - sed
+      - psutils
       
     stage-packages:
       - bash
       - awk
       - coreutils
       - grep
-      - sed    
+      - sed   
+      - psutils
