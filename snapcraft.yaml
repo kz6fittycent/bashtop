@@ -1,6 +1,6 @@
 name: bashtop
 version: 'latest'
-summary: Resource monitor that shows usage and stats for processor, memory, disks, network and processes
+summary: Resource monitor for your terminal
 description: |
   Resource monitor that shows usage and stats for processor, memory, disks, network and processes.
     - Easy to use, with a game inspired menu system.
