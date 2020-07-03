@@ -48,7 +48,7 @@ parts:
       - coreutils
       - grep
       - sed
-      - psutils
+      - python3-psutil
       
     stage-packages:
       - bash
@@ -56,4 +56,4 @@ parts:
       - coreutils
       - grep
       - sed   
-      - psutils
+      - python3-psutil
