@@ -19,7 +19,7 @@ description: |
     sudo snap connect bashtop:mount-observe
     sudo snap connect bashtop:network-control
   
-license: apache-2.0
+#license: apache2.0
 
 base: core18
 grade: stable
