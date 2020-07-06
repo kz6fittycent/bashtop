@@ -35,6 +35,7 @@ apps:
       - network-control
       - process-control
       - system-observe
+      - x11
       
 parts:
   bashtop:
