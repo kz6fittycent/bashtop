@@ -18,6 +18,10 @@ sudo snap connect bashtop:mount-observe
 sudo snap connect bashtop:network-control
 ```
 
+## Make changes to the configuration and add themes:
+
+`~/snap/bashtop/current/.config/bashtop`
+
 ## To learn more:
 
 https://snapcraft.io/bashtop 
