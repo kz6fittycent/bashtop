@@ -48,7 +48,6 @@ parts:
       - coreutils
       - grep
       - sed
-      - python3-psutil
       
     stage-packages:
       - bash
@@ -57,3 +56,6 @@ parts:
       - grep
       - sed   
       - python3-psutil
+      - lm-sensors
+      - sysstat
+      - curl
