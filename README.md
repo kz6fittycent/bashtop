@@ -16,6 +16,11 @@ Once installed, run the following commands to improve functionality:
 ```
 sudo snap connect bashtop:mount-observe
 sudo snap connect bashtop:network-control
+sudo snap connect bashtop:mount-observe
+sudo snap connect bashtop:network-control
+sudo snap connect bashtop:hardware-observe
+sudo snap connect bashtop:system-observe
+sudo snap connect bashtop:process-control
 ```
 
 ## Make changes to the configuration and add themes:
