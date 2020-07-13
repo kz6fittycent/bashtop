@@ -18,6 +18,9 @@ description: |
   Once installed, run the following commands to improve functionality:
     sudo snap connect bashtop:mount-observe
     sudo snap connect bashtop:network-control
+    sudo snap connect bashtop:hardware-observe
+    sudo snap connect bashtop:system-observe
+    sudo snap connect bashtop:process-control
   
 license: Apache-2.0
 
@@ -35,6 +38,8 @@ apps:
       - network-control
       - process-control
       - system-observe
+      - hardware-observe
+      - network
       
 parts:
   bashtop:
