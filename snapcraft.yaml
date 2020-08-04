@@ -1,5 +1,6 @@
 name: bashtop
-version: 'latest'
+#version: 'latest'
+adopt-info: bashtop
 summary: Resource monitor for your terminal
 description: |
   Resource monitor that shows usage and stats for processor, memory, disks, network and processes.
@@ -46,7 +47,10 @@ parts:
     source: https://github.com/aristocratos/bashtop
     source-type: git
     plugin: make
-    
+    override-pull: |
+      snapcraftctl pull
+      snapcraftctl set-version "$(git describe --tags | sed 's/^v//')"
+      
     build-packages:
       - bash
       - awk
