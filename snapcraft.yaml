@@ -41,6 +41,7 @@ apps:
       - system-observe
       - hardware-observe
       - network
+      - home
       
 parts:
   bashtop:
