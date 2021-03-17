@@ -28,6 +28,7 @@ license: Apache-2.0
 base: core18
 grade: stable
 confinement: strict
+compression: lzo
 
 apps:
   bashtop:
