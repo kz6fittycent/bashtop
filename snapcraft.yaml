@@ -25,14 +25,14 @@ description: |
   
 license: Apache-2.0
 
-base: core18
+base: core20
 grade: stable
 confinement: strict
 compression: lzo
 
 apps:
   bashtop:
-    command: bashtop
+    command: bin/bashtop
     environment:
       LC_ALL: C.UTF-8
     plugs:
