@@ -32,7 +32,7 @@ compression: lzo
 
 apps:
   bashtop:
-    command: bin/bashtop
+    command: bashtop
     environment:
       LC_ALL: C.UTF-8
     plugs:
