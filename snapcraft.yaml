@@ -24,9 +24,6 @@ description: |
   
 license: Apache-2.0
 
-assumes:
-  - command-chain
-
 base: core20
 grade: stable
 confinement: strict
@@ -42,8 +39,6 @@ architectures:
 apps:
   bashtop:
     command: usr/bin/bashtop
-    command-chain: 
-      - bin/homeishome-launch       
     environment:
       LC_ALL: C.UTF-8
       LANG: C.UTF-8
@@ -101,9 +96,4 @@ parts:
     
     build-packages: 
       - python3-all-dev
-      - python3-setuptools
-      
-  homeishome-launch:
-    plugin: nil
-    stage-snaps:
-      - homeishome-launch          
+      - python3-setuptools        
