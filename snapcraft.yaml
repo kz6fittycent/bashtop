@@ -1,5 +1,4 @@
 name: bashtop
-#version: 'latest'
 adopt-info: bashtop
 summary: Resource monitor for your terminal
 description: |
@@ -39,7 +38,7 @@ architectures:
 
 apps:
   bashtop:
-    command: bashtop
+    command: usr/bin/bashtop
     environment:
       LC_ALL: C.UTF-8
     plugs:
@@ -56,6 +55,9 @@ parts:
     source: https://github.com/aristocratos/bashtop
     source-type: git
     plugin: make
+    build-environment:
+      - PREFIX: "/usr"
+      
     override-pull: |
       snapcraftctl pull
       snapcraftctl set-version "$(git describe --tags | sed 's/^v//' | cut -d "-" -f1)"
