@@ -24,6 +24,9 @@ description: |
   
 license: Apache-2.0
 
+assumes:
+  - command-chain
+
 base: core20
 grade: stable
 confinement: strict
@@ -39,8 +42,12 @@ architectures:
 apps:
   bashtop:
     command: usr/bin/bashtop
+    command-chain: 
+      - bin/homeishome-launch       
     environment:
       LC_ALL: C.UTF-8
+      LANG: C.UTF-8
+      PYTHONPATH: $SNAP/usr/lib/python3/dist-packages
     plugs:
       - mount-observe
       - network-control
@@ -75,7 +82,28 @@ parts:
       - coreutils
       - grep
       - sed   
-      - python3-psutil
       - lm-sensors
       - sysstat
       - curl
+      
+  psutil:
+    source: https://github.com/giampaolo/psutil.git
+    plugin: nil
+    
+    override-pull: |
+      snapcraftctl pull
+      git checkout `git describe --tags --abbrev=0`
+    
+    override-build: |
+      python3 setup.py install --install-layout=deb --root=$SNAPCRAFT_PART_INSTALL --prefix=/usr
+      find $SNAPCRAFT_PART_INSTALL -type d -name __pycache__ -print0 | xargs -0 rm -rf
+      find $SNAPCRAFT_PART_INSTALL -type f -name *.so -print0 | xargs -0 strip -s
+    
+    build-packages: 
+      - python3-all-dev
+      - python3-setuptools
+      
+  homeishome-launch:
+    plugin: nil
+    stage-snaps:
+      - homeishome-launch          
