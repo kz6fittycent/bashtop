@@ -15,7 +15,7 @@ Once installed, run the following commands to improve functionality:
 
 ```
 sudo snap connect bashtop:mount-observe
-sudo snap connect bashtop:network-control
+sudo snap connect bashtop:network-observe
 sudo snap connect bashtop:mount-observe
 sudo snap connect bashtop:network-control
 sudo snap connect bashtop:hardware-observe
