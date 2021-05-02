@@ -45,7 +45,7 @@ apps:
       PYTHONPATH: $SNAP/usr/lib/python3/dist-packages
     plugs:
       - mount-observe
-      - network-control
+      - network-observe
       - process-control
       - system-observe
       - hardware-observe
